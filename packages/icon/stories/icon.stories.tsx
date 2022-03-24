@@ -43,7 +43,9 @@ import {
   FilePPTIcon,
   StarIcon,
   HeartIcon,
-  CalendarIcon
+  CalendarIcon,
+  PreDoubleIcon,
+  NextDoubleIcon,
 } from "../src"
 
 //👇 This default export determines where your story goes in the story list
@@ -125,3 +127,9 @@ export const FilePicture: Story<IconProps> = (props) => (
 export const FileWPS: Story<IconProps> = (props) => <FileWPSIcon {...props} />
 export const FilePPT: Story<IconProps> = (props) => <FilePPTIcon {...props} />
 export const Calendar: Story<IconProps> = (props) => <CalendarIcon {...props} />
+export const PreDouble: Story<IconProps> = (props) => (
+  <PreDoubleIcon {...props} />
+)
+export const NextDouble: Story<IconProps> = (props) => (
+  <NextDoubleIcon {...props} />
+)

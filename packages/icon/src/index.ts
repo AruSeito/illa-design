@@ -46,3 +46,5 @@ export * from "./icons/share"
 export * from "./icons/star"
 export * from "./icons/heart"
 export * from './icons/calendar'
+export * from "./icons/pre-double"
+export * from "./icons/next-double"
