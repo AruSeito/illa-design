@@ -44,6 +44,7 @@ import {
   StarIcon,
   HeartIcon,
   CalendarIcon,
+  PenIcon,
   PreDoubleIcon,
   NextDoubleIcon,
 } from "../src"
@@ -127,6 +128,7 @@ export const FilePicture: Story<IconProps> = (props) => (
 export const FileWPS: Story<IconProps> = (props) => <FileWPSIcon {...props} />
 export const FilePPT: Story<IconProps> = (props) => <FilePPTIcon {...props} />
 export const Calendar: Story<IconProps> = (props) => <CalendarIcon {...props} />
+export const Pen: Story<IconProps> = (props) => <PenIcon {...props} />
 export const PreDouble: Story<IconProps> = (props) => (
   <PreDoubleIcon {...props} />
 )
