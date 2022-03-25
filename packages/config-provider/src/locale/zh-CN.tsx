@@ -53,7 +53,7 @@ export const zhCN = {
     November: "十一月",
     December: "十二月",
     startDate: "开始日期",
-    endDate: "结束日期"
+    endDate: "结束日期",
   },
   calendar: {
     year: "年",

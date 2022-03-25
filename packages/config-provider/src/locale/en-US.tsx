@@ -53,7 +53,7 @@ export const enUS = {
     November: "November",
     December: "December",
     startDate: "StartDate",
-    endDate: "EndDate"
+    endDate: "EndDate",
   },
   calendar: {
     year: "Year",
