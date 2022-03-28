@@ -93,9 +93,6 @@ test("click one day", () => {
   })
 
   fireEvent.click(screen.getByText("today"))
-  // expect(screen.getByText(curDay)).toHaveStyle({
-  //   backgroundColor: globalColor(`--${illaPrefix}-blue-03`),
-  // })
 
   fireEvent.click(screen.getByTitle("PreIcon"))
   fireEvent.click(screen.getByTitle("PreIcon"))
@@ -116,14 +113,6 @@ test("change mode", () => {
     screen.getByTestId("container").children[1].children[0].children.length,
   ).toBe(12)
 })
-
-// test("Today on body", () => {
-//   render(<Calendar panel={true} mode={"day"} />)
-//   fireEvent.click(screen.getByText("Today"))
-//   expect(screen.getByText(curDay)).toHaveStyle({
-//     backgroundColor: globalColor(`--${illaPrefix}-blue-03`),
-//   })
-// })
 
 test("panel month & year", () => {
   render(<Calendar panel={true} mode={"month"} />)
