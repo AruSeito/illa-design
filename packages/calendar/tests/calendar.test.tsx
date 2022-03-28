@@ -93,7 +93,6 @@ test("click one day", () => {
   })
 
   fireEvent.click(screen.getByText("today"))
-
   fireEvent.click(screen.getByTitle("PreIcon"))
   fireEvent.click(screen.getByTitle("PreIcon"))
   fireEvent.click(screen.getAllByText(26)[0])
