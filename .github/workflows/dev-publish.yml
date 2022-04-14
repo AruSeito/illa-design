@@ -4,10 +4,6 @@ on:
   push:
     branches: [ main, develop ]
 
-env:
-  TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
-  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-
 jobs:
   install:
     runs-on: macos-latest
@@ -24,23 +20,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Cache node modules & Turbo building
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: |
-            **/node_modules
-            ~/Library/Caches/Cypress
-          key: ${{ runner.os }}-build-${{ github.run_id }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ github.run_id }}
-
-
       - name: Build
         run: |
           yarn install --frozen-lockfile
-          yarn build-all-components
           yarn build-storybook
 
   build:
@@ -62,23 +44,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-
-      - name: Cache node modules & Turbo building
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: |
-            **/node_modules
-            ~/Library/Caches/Cypress
-          key: ${{ runner.os }}-build-${{ github.run_id }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ github.run_id }}
-
-      - name: Run Test
-        run: |
-          yarn cypress info
-          yarn test
 
       - name: Publish storybook to server
         uses: easingthemes/ssh-deploy@main
